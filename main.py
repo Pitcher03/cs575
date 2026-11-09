@@ -20,9 +20,9 @@ def main() -> None:
     ensure_output_dir("./output")
     print("=== DFA Approximation via Hankel Matrix SVD ===")
     if MODE == 1:
-        print("Example DFA: accept when the 4th symbol from the end is '1'")
+        print("Example DFA: accept when the k-th symbol from the end is '1'")
     elif MODE == 2:
-        print("Example DFA: accept when the binary string is divisible by 7")
+        print("Example DFA: accept when the binary string is divisible by m")
 
     print("\n[1/5] Generating minimal exact DFA...")
     exact_dfa = build_suffix_tracking_dfa(k=4) if MODE == 1 else build_modulo_dfa(m=7)
